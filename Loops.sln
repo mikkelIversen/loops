@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops", "Loops\Loops.csproj", "{33C188A3-25C7-4F9E-83F6-F5D0C9EA63C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{BF4820E1-DE08-4F53-A55D-B24A23E08044}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{33C188A3-25C7-4F9E-83F6-F5D0C9EA63C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33C188A3-25C7-4F9E-83F6-F5D0C9EA63C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33C188A3-25C7-4F9E-83F6-F5D0C9EA63C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF4820E1-DE08-4F53-A55D-B24A23E08044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4820E1-DE08-4F53-A55D-B24A23E08044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4820E1-DE08-4F53-A55D-B24A23E08044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4820E1-DE08-4F53-A55D-B24A23E08044}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
