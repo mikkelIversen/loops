@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Strings
 {
-    internal class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
@@ -22,6 +22,10 @@ namespace Strings
 
         public static string AddSeparator(string text, char separator)
         {
+            if (text.Length == 0)
+            {
+                throw new ArgumentException("Text cannot be empty");
+            }
             char[] chars = text.ToCharArray();
             string result = "";
             foreach (char c in chars)
