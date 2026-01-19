@@ -158,6 +158,18 @@ namespace Yatzy
             if (round >= 13)
             {
                 gameState = State.ENDED;
+                int points = 0;
+                foreach (Player player in players)
+                {
+                    int point = 0;
+                    Dictionary<YatzyEntry, int> po = player.points;
+                    foreach (KeyValuePair<YatzyEntry, int> entry in po)
+                    {
+                        point += entry.Value;
+                    }
+                    
+                    if(point > points) winner = player;
+                }
                 Thread.Sleep(3000);
                 openMenu("win");
             }
