@@ -4,11 +4,12 @@ namespace Yatzy
     {
         public override string use(Player player)
         {
+            player.savedDice.Sort();
             player.savedDice.Reverse();
             if (player.points.ContainsKey(this)) return "You have already used this entry";
             int score = 0;
             int pairs = 0;
-            for (int i = 1; i < 7; i++)
+            for (int i = 6; i > 0; i--)
             {
                 if (player.savedDice.FindAll(d => d == i).Count > 1)
                 {

@@ -47,6 +47,7 @@ namespace Yatzy
             yatzyEntries.Add("Fours", new YatzyFours());
             yatzyEntries.Add("Fives", new YatzyFives());
             yatzyEntries.Add("Sixes", new YatzySixes());
+            yatzyEntries.Add("Bonus", new YatzyBonus());
             yatzyEntries.Add("One Pair", new YatzyPairOne());
             yatzyEntries.Add("Two Pair", new YatzyPairTwo());
             yatzyEntries.Add("Small Straight", new YatzyStraightSmall());
@@ -114,7 +115,6 @@ namespace Yatzy
 
         public void tick()
         {
-            round++;
             Console.Clear();
             DrawScoreboard.drawScoreboard(this);
             switch (gameState)
@@ -140,12 +140,15 @@ namespace Yatzy
                     if (currentPlayer.savedDice.Count > 4)
                     {
                         currentPlayer.savedDice.Sort();
+                        currentPlayer.savedDice.Reverse();
                         gameState = State.CHOOSING_ENTRY_SAVE;
                         Console.Clear();
                         DrawScoreboardSelector.draw(this);
                         
                         currentPlayer.savedDice = new List<int>();
                         currentPlayer = getNextPlayer();
+                        
+                        round++;
                         gameState = State.THORWING;
                     }
                     else
@@ -155,7 +158,7 @@ namespace Yatzy
                     break;
             }
 
-            if (round >= 13)
+            if (round >= 13 * players.Count)
             {
                 gameState = State.ENDED;
                 int points = 0;
@@ -171,6 +174,7 @@ namespace Yatzy
                     if(point > points) winner = player;
                 }
                 Thread.Sleep(3000);
+                Console.Clear();
                 openMenu("win");
             }
         }

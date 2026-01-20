@@ -51,6 +51,7 @@
         <Compile Include="Util\DrawGameOption.cs" />
         <Compile Include="Util\DrawScoreboard.cs" />
         <Compile Include="Util\DrawScoreboardSelector.cs" />
+        <Compile Include="YatzyEntry\YatzyBonus.cs" />
         <Compile Include="YatzyEntry\YatzyChance.cs" />
         <Compile Include="YatzyEntry\YatzyEntry.cs" />
         <Compile Include="YatzyEntry\YatzyFives.cs" />

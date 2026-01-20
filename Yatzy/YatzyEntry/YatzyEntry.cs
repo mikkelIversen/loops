@@ -2,11 +2,14 @@ namespace Yatzy
 {
     public class YatzyEntry
     {
-        private string id;
-
         public virtual string use(Player player)
         {
-            return "";
+            return "You cannot use this entry";
+        }
+
+        public virtual bool silentUse(Player player)
+        {
+            return false;
         }
 
         public int getPoint(Player player)

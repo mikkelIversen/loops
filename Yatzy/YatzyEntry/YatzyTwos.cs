@@ -11,6 +11,7 @@ namespace Yatzy
             
             score = number * count;
             player.points.Add(this, score);
+            GameManager.get().yatzyEntries["Bonus"].silentUse(player);
             return "";
         }
     }
